@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Input, Avatar } from '@rneui/themed';
 import { Icon } from '@rneui/base';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      {/* Header Section */}
       <View style={styles.inputContainer}>
         <Input 
           placeholder='Search apps & Games'
@@ -34,6 +35,24 @@ export default function App() {
           containerStyle={styles.avatar}
         />
       </View>
+      {/* Menu Section */}
+      
+      {/* Menu Section */}
+      <View style={styles.menuContainer}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.menuScroll}
+        >
+          <Text style={styles.menuText}>For You</Text>
+          <Text style={styles.menuText}>Top Charts</Text>
+          <Text style={styles.menuText}>Children</Text>
+          <Text style={styles.menuText}>Other Devices</Text>
+          <Text style={styles.menuText}>Premium</Text>
+          <Text style={styles.menuText}>Categories</Text>
+        </ScrollView>
+      </View>
+
     </View>
   );
 }
@@ -72,5 +91,27 @@ const styles = StyleSheet.create({
   avatar: {
     marginLeft: 10,
     marginTop: 5,
+  },
+  menuContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    marginTop: -30,
+    borderBottomWidth: 1,
+    borderBottomColor: '#2A2A2A',
+  },
+  menuText: {
+    fontSize: 20,
+    color: '#86939e',
+    marginLeft: 10,
+    marginRight: 30,
+    marginTop: 10,
+    fontWeight: 'bold',
+  },
+  menuScroll: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
   }
 });

@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Input } from '@rneui/themed';
+import { Input, Avatar } from '@rneui/themed';
 import { Icon } from '@rneui/base';
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <Input 
-          placeholder='Search apps & games'
+          placeholder='Search apps & Games'
           leftIcon={
             <Icon
               name='search'
@@ -18,6 +18,7 @@ export default function App() {
             />
           }
           inputContainerStyle={styles.searchInput}
+          inputStyle={styles.inputText}
         />
         <Icon 
           name='notifications-none'
@@ -26,12 +27,11 @@ export default function App() {
           color='#86939e'
           style={styles.notificationIcon}
         />
-        <Icon
-          name='account-circle'
-          type='material'
+        <Avatar
+          rounded={true}
           size={40}
-          color='#86939e'
-          style={styles.avatarIcon}
+          source={{ uri: 'https://cdn.pixabay.com/photo/2018/10/14/18/00/dog-3747022_1280.jpg' }}
+          containerStyle={styles.avatar}
         />
       </View>
     </View>
@@ -59,13 +59,17 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0,
     backgroundColor: '#2A2A2A',
     paddingHorizontal: 10,
+    fontSize: 20,
+  },
+  inputText: {
+    fontSize: 24.8,
   },
   notificationIcon: {
     color: '#86939e',
     marginLeft: 10,
     marginTop: 5,
   },
-  avatarIcon: {
+  avatar: {
     marginLeft: 10,
     marginTop: 5,
   }

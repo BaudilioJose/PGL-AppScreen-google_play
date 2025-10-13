@@ -19,6 +19,20 @@ export default function App() {
           }
           inputContainerStyle={styles.searchInput}
         />
+        <Icon 
+          name='notifications'
+          type='material'
+          size={40}
+          color='#86939e'
+          style={styles.notificationIcon}
+        />
+        <Icon
+          name='account-circle'
+          type='material'
+          size={40}
+          color='#86939e'
+          style={styles.avatarIcon}
+        />
       </View>
     </View>
   );
@@ -33,6 +47,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     width: '70%',
+    flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     padding: 10,
@@ -44,5 +59,14 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0,
     backgroundColor: '#2A2A2A',
     paddingHorizontal: 10,
+  },
+  notificationIcon: {
+    color: '#86939e',
+    marginLeft: 10,
+    marginTop: 5,
+  },
+  avatarIcon: {
+    marginLeft: 10,
+    marginTop: 5,
   }
 });

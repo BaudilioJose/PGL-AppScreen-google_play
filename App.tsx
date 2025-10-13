@@ -20,7 +20,7 @@ export default function App() {
           inputContainerStyle={styles.searchInput}
         />
         <Icon 
-          name='notifications'
+          name='notifications-none'
           type='material'
           size={40}
           color='#86939e'

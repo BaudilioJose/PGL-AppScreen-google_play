@@ -35,7 +35,6 @@ export default function App() {
           containerStyle={styles.avatar}
         />
       </View>
-      {/* Menu Section */}
       
       {/* Menu Section */}
       <View style={styles.menuContainer}>
@@ -52,6 +51,15 @@ export default function App() {
           <Text style={styles.menuText}>Categories</Text>
         </ScrollView>
       </View>
+
+      {/* Populars Apps Section */}
+       
+       <View style={styles.popularAppsContainer}>
+          <Text style={styles.popularAppsText}>Popular Apps</Text>
+          <Icon style={styles.popularAppsIcon} name='arrow-right' type='font-awesome' size={20} color='#86939e' />
+       </View>
+
+
 
     </View>
   );
@@ -113,5 +121,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 10,
+  },
+  popularAppsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+  },
+  popularAppsText: {
+    fontSize: 20,
+    color: '#86939e',
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  popularAppsIcon: {
+    marginRight: 15
   }
 });

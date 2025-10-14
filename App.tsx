@@ -5,7 +5,10 @@ import { Icon } from '@rneui/base';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={styles.mainContainer}>
+    <ScrollView
+     
+     contentContainerStyle={styles.container}>
       {/* Header Section */}
       <View style={styles.inputContainer}>
         <Input 
@@ -59,7 +62,7 @@ export default function App() {
           <Icon style={styles.popularAppsIcon} name='arrow-right' type='font-awesome' size={20} color='#86939e' />
        </View>
 
-      {/* Apps Grid Section */}
+      {/* Popular Apps Grid Section */}
       <ScrollView 
         horizontal
         showsVerticalScrollIndicator={false}>
@@ -121,13 +124,24 @@ export default function App() {
       </View>
       </ScrollView>
 
+      {/** Ads Suggested for you Section */}
+      <View style={styles.adsSuggestedForYouContainer}>
+        <Text style={styles.adsSuggestedForYouText}>Ads</Text>
+        <Text style={styles.adsSuggestedForYouText2}>Suggested for you</Text>
+        <Icon name='more-vert' type='material' size={24} color='#86939e' />
+      </View>
+
+    </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
+    backgroundColor: '#121212',
+  },
+  container: {
     backgroundColor: '#121212',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
@@ -239,5 +253,24 @@ const styles = StyleSheet.create({
     color: '#86939e',
     marginLeft: 5,
     lineHeight: 20,
+  },
+  adsSuggestedForYouContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    paddingHorizontal: 10,
+    paddingVertical: 35,
+  },
+  adsSuggestedForYouText: {
+    fontSize: 15,
+    color: '#86939e',
+    marginLeft: 10,
+  },
+  adsSuggestedForYouText2: {
+    fontSize: 20,
+    color: '#86939e',
+    marginLeft: -90,
   }
 });

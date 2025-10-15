@@ -130,6 +130,53 @@ export default function App() {
         <Text style={styles.adsSuggestedForYouText2}>Suggested for you</Text>
         <Icon name='more-vert' type='material' size={24} color='#86939e' />
       </View>
+      {/** Ads Suggested for you Grid Section */}
+      <ScrollView>
+        <View style={styles.adsSuggestedForYouGridContainer}>
+          <Image source={{ uri: 'https://play-lh.googleusercontent.com/ResrWBDXfRegdQDSA2MP6bxiYlyfucHymWBW4yy2M7YetU3SCCZuLmFhwpeVFMFGQA' }} style={styles.adsSuggestedForYouGridImage} />
+          <View style={styles.adsSuggestedForYouGridTextContainer}>
+            <Text style={styles.adsSuggestedForYouGridText}>Texto principal</Text>
+            <Text style={styles.adsSuggestedForYouGridText}>Subtexto</Text>
+            <View style={styles.adsSuggestedForYouStarContainer}>
+              <Text style={styles.adsSuggestedForYouGridText2}>4.6</Text>
+              <Icon name='star' type='font-awesome' size={15} color='#86939e' />
+            </View>
+          </View>
+        </View>
+
+        <View style={styles.adsSuggestedForYouGridContainer}>
+          <Image source={{ uri: 'https://play-lh.googleusercontent.com/ResrWBDXfRegdQDSA2MP6bxiYlyfucHymWBW4yy2M7YetU3SCCZuLmFhwpeVFMFGQA' }} style={styles.adsSuggestedForYouGridImage} />
+          <View style={styles.adsSuggestedForYouGridTextContainer}>
+            <Text style={styles.adsSuggestedForYouGridText}>Samsung Galaxy S23 Ultra</Text>
+            <View style={styles.adsSuggestedForYouStarContainer}>
+              <Text style={styles.adsSuggestedForYouGridText2}>4.6</Text>
+              <Icon name='star' type='font-awesome' size={15} color='#86939e' />
+            </View>
+          </View>
+        </View>ç
+
+        <View style={styles.adsSuggestedForYouGridContainer}>
+          <Image source={{ uri: 'https://play-lh.googleusercontent.com/ResrWBDXfRegdQDSA2MP6bxiYlyfucHymWBW4yy2M7YetU3SCCZuLmFhwpeVFMFGQA' }} style={styles.adsSuggestedForYouGridImage} />
+          <View style={styles.adsSuggestedForYouGridTextContainer}>
+            <Text style={styles.adsSuggestedForYouGridText}>Samsung Galaxy S23 Ultra</Text>
+            <View style={styles.adsSuggestedForYouStarContainer}>
+              <Text style={styles.adsSuggestedForYouGridText2}>4.6</Text>
+              <Icon name='star' type='font-awesome' size={15} color='#86939e' />
+            </View>
+          </View>
+        </View>
+
+        <View style={styles.adsSuggestedForYouGridContainer}>
+          <Image source={{ uri: 'https://play-lh.googleusercontent.com/ResrWBDXfRegdQDSA2MP6bxiYlyfucHymWBW4yy2M7YetU3SCCZuLmFhwpeVFMFGQA' }} style={styles.adsSuggestedForYouGridImage} />
+          <View style={styles.adsSuggestedForYouGridTextContainer}>
+            <Text style={styles.adsSuggestedForYouGridText}>Samsung Galaxy S23 Ultra</Text>
+            <View style={styles.adsSuggestedForYouStarContainer}>
+              <Text style={styles.adsSuggestedForYouGridText2}>4.6</Text>
+              <Icon name='star' type='font-awesome' size={15} color='#86939e' />
+            </View>
+          </View>
+        </View>
+      </ScrollView>
 
     </ScrollView>
     </View>
@@ -272,5 +319,44 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#86939e',
     marginLeft: -90,
-  }
+  },
+  adsSuggestedForYouGridContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    width: '100%',
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+  },
+  adsSuggestedForYouGridImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 30,
+    margin: 10,
+  },
+  adsSuggestedForYouGridText: {
+    fontSize: 18,
+    color: '#86939e',
+    marginLeft: 10,
+    lineHeight: 20,
+  },
+  adsSuggestedForYouGridText2: {
+    fontSize: 19,
+    color: '#86939e',
+    marginLeft: 5,
+    lineHeight: 20,
+  },
+  adsSuggestedForYouGridTextContainer: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  adsSuggestedForYouStarContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    marginLeft: 5,
+    marginTop: 5,
+  },
 });

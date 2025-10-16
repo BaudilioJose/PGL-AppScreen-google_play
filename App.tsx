@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import { Input, Avatar } from '@rneui/themed';
 import { Icon } from '@rneui/base';
 import {AppCardItem} from './components/AppCardItem';
+import { Menu } from './components/Menu';
 
 export default function App() {
   return (
@@ -156,6 +157,7 @@ export default function App() {
       </ScrollView>
 
     </ScrollView>
+    <Menu />
     </View>
   );
 }

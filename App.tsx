@@ -6,6 +6,7 @@ import {AppCardItem} from './components/AppCardItem';
 import { Menu } from './components/Menu';
 import { Header } from './components/Header';
 import { MenuPrimary } from './components/MenuPrimary';
+import { PopularSection } from './components/PopularSection';
 export default function App() {
 
   const menuItems = ["For You", "Top Charts", "Children", "Other Devices", "Premium", "Categories"];
@@ -32,8 +33,7 @@ export default function App() {
       {/* Populars Apps Section */}
        
        <View style={styles.popularAppsContainer}>
-          <Text style={styles.popularAppsText}>Popular Apps</Text>
-          <Icon style={styles.popularAppsIcon} name='arrow-right' type='font-awesome' size={20} color='#86939e' />
+          <PopularSection />          
        </View>
 
       {/* Popular Apps Grid Section */}
@@ -165,15 +165,6 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingHorizontal: 10,
     paddingVertical: 15,
-  },
-  popularAppsText: {
-    fontSize: 20,
-    color: '#86939e',
-    marginLeft: 10,
-    marginRight: 10,
-  },
-  popularAppsIcon: {
-    marginRight: 15
   },
   appsGridContainer: {
     flexDirection: 'row',

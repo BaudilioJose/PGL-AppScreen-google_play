@@ -1,11 +1,13 @@
 import {Text, View, StyleSheet} from 'react-native';
 
-const menuItems = ["For You", "Top Charts", "Children", "Other Devices", "Premium", "Categories"];
+type MenuPrimaryProps = {
+    items: string[];
+}
 
-export function MenuPrimary() {
+export function MenuPrimary({ items }: MenuPrimaryProps) {
     return (
         <>
-            {menuItems.map((item, index) => (
+            {items.map((item, index) => (
                 <Text key={index} style={styles.menuText}>{item}</Text>
             ))}
         </>

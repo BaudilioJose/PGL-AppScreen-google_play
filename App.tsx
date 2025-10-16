@@ -7,6 +7,9 @@ import { Menu } from './components/Menu';
 import { Header } from './components/Header';
 import { MenuPrimary } from './components/MenuPrimary';
 export default function App() {
+
+  const menuItems = ["For You", "Top Charts", "Children", "Other Devices", "Premium", "Categories"];
+
   return (
     <View style={styles.mainContainer}>
     <ScrollView
@@ -22,7 +25,7 @@ export default function App() {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.menuScroll}
         >
-          <MenuPrimary />
+          <MenuPrimary items={menuItems} />
         </ScrollView>
       </View>
 

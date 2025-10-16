@@ -5,6 +5,7 @@ import { Icon } from '@rneui/base';
 import {AppCardItem} from './components/AppCardItem';
 import { Menu } from './components/Menu';
 import { Header } from './components/Header';
+import { MenuPrimary } from './components/MenuPrimary';
 export default function App() {
   return (
     <View style={styles.mainContainer}>
@@ -21,12 +22,7 @@ export default function App() {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.menuScroll}
         >
-          <Text style={styles.menuText}>For You</Text>
-          <Text style={styles.menuText}>Top Charts</Text>
-          <Text style={styles.menuText}>Children</Text>
-          <Text style={styles.menuText}>Other Devices</Text>
-          <Text style={styles.menuText}>Premium</Text>
-          <Text style={styles.menuText}>Categories</Text>
+          <MenuPrimary />
         </ScrollView>
       </View>
 
@@ -153,14 +149,6 @@ const styles = StyleSheet.create({
     marginTop: -30,
     borderBottomWidth: 1,
     borderBottomColor: '#2A2A2A',
-  },
-  menuText: {
-    fontSize: 20,
-    color: '#86939e',
-    marginLeft: 10,
-    marginRight: 30,
-    marginTop: 10,
-    fontWeight: 'bold',
   },
   menuScroll: {
     flexDirection: 'row',

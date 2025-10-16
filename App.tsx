@@ -8,6 +8,7 @@ import { Header } from './components/Header';
 import { MenuPrimary } from './components/MenuPrimary';
 import { PopularSection } from './components/PopularSection';
 import { PopularAppGrid } from './components/PopularAppGrid';
+import { SugestedHeader } from './components/SugestedHeader';
 export default function App() {
 
   const menuItems = ["For You", "Top Charts", "Children", "Other Devices", "Premium", "Categories"];
@@ -77,9 +78,7 @@ export default function App() {
 
       {/** Ads Suggested for you Section */}
       <View style={styles.adsSuggestedForYouContainer}>
-        <Text style={styles.adsSuggestedForYouText}>Ads</Text>
-        <Text style={styles.adsSuggestedForYouText2}>Suggested for you</Text>
-        <Icon name='more-vert' type='material' size={24} color='#86939e' />
+        <SugestedHeader />
       </View>
       {/** Ads Suggested for you Grid Section */}
       <ScrollView 
@@ -158,16 +157,6 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingHorizontal: 10,
     paddingTop: 35,
-  },
-  adsSuggestedForYouText: {
-    fontSize: 15,
-    color: '#86939e',
-    marginLeft: 10,
-  },
-  adsSuggestedForYouText2: {
-    fontSize: 20,
-    color: '#86939e',
-    marginLeft: -90,
   },
   adsSuggestedForYouGridContainer: {
     flexDirection: 'row',
